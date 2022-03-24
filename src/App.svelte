@@ -1,9 +1,15 @@
 <script>
-  let message = 'Hey Svelte!'
+  let count = 1
+
+  function increment (){
+    count++
+  }
 </script>
 
-<main class="">
-  {message} // svelte syntax
+<main class="flex flex-col justify-center items-center h-screen space-y-4">
+  {count}
+  <button on:click="{increment}" class="btn btn-primary">Button</button>
+
 </main>
 
 <style>
